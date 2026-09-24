@@ -15,8 +15,8 @@ const installation = target.platform === 'win32' ? await mkdtemp(join(tmpdir(), 
 try {
   // Native Office helpers must run from installation-sized paths; the nested
   // repository build tree adds directories absent from a normal installation.
-  if (installation !== undefined) await cp(packaged, installation, { recursive: true, force: false, errorOnExist: true })
-  const app = installation ?? packaged
+  const app = installation === undefined ? packaged : join(installation, 'app')
+  if (installation !== undefined) await cp(packaged, app, { recursive: true, force: false, errorOnExist: true })
   const resources = join(app, 'resources')
   const executable = join(app, target.platform === 'win32' ? 'Local Harness.exe' : 'local-harness')
   const descriptor = await verifyDesktopRuntime(paths.dsh, readDesktopRuntime(paths.dsh).release.version, target)
