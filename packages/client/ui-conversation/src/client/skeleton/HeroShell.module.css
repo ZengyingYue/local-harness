@@ -229,3 +229,66 @@
   line-height: 18px;
   color: var(--dsw-alias-state-error-primary);
 }
+
+.eyebrow {
+  margin: 4px 0 8px;
+  text-align: center;
+  color: var(--lh-accent);
+  font-family: var(--font-family-code);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+}
+.subtitle {
+  margin: 2px 0 18px;
+  color: var(--dsw-alias-label-secondary);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.orbit {
+  position: relative;
+  align-self: center;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 12px;
+  border: 0.5px solid var(--dsw-alias-border-l3);
+  border-radius: 50%;
+  corner-shape: round;
+  background: radial-gradient(circle, var(--lh-accent-soft), transparent 70%);
+}
+.orbit::before {
+  content: '';
+  position: absolute;
+  inset: 18px -13px;
+  border: 1px solid var(--lh-accent);
+  border-radius: 50%;
+  corner-shape: round;
+  transform: rotate(-35deg);
+  opacity: .6;
+}
+.orbit::after {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border: 0.5px solid var(--dsw-alias-border-l4);
+  border-radius: 50%;
+  corner-shape: round;
+}
+.orbit span {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 7px;
+  top: 59px;
+  border-radius: 50%;
+  corner-shape: round;
+  background: var(--lh-accent);
+  box-shadow: 0 0 18px var(--lh-accent);
+}
+@media (max-height: 640px) { .orbit { display: none; } .subtitle { margin-bottom: 6px; } }
+
+.root {
+  background-image: radial-gradient(ellipse at 50% 40%, var(--lh-glow), transparent 65%), linear-gradient(var(--lh-grid) 1px, transparent 1px), linear-gradient(90deg, var(--lh-grid) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}

@@ -1,0 +1,43 @@
+/* Shared Local Harness palette for both native and browser shells. */
+body {
+  --lh-accent: #087b97;
+  --dsw-alias-bg-module-platform: #eaf1f8;
+  --dsw-alias-interactive-bg-hover-solid: #dfeaf4;
+  --dsw-specific-input-major: #ffffff;
+  --dsw-alias-button-elevated-fill: #dfedf5;
+  --lh-accent-soft: #e1f1f6;
+  --lh-grid: rgba(34, 104, 139, .055);
+  --lh-glow: rgba(18, 151, 184, .10);
+  --dsw-alias-bg-base: #f4f8fc;
+  --dsw-alias-bg-layer-1: #ffffff;
+  --dsw-alias-bg-layer-2: #eaf1f8;
+  --dsw-alias-bg-layer-3: #e0eaf4;
+  --dsw-specific-sidebar-fill: #eaf1f8;
+  --dsw-alias-brand-primary: #125f79;
+  --dsw-alias-brand-text: #125f79;
+  --dsw-alias-border-l3: rgba(39, 94, 128, .18);
+  --dsw-alias-border-l4: rgba(39, 94, 128, .26);
+}
+body[data-ds-dark-theme] {
+  --lh-accent: #67d8ec;
+  --dsw-alias-bg-module-platform: #14263a;
+  --dsw-alias-interactive-bg-hover-solid: #223c54;
+  --dsw-specific-input-major: #13243a;
+  --dsw-alias-button-elevated-fill: #183248;
+  --lh-accent-soft: #122f40;
+  --lh-grid: rgba(128, 195, 226, .045);
+  --lh-glow: rgba(43, 159, 195, .12);
+  --dsw-alias-bg-base: #0b1422;
+  --dsw-alias-bg-layer-1: #111f31;
+  --dsw-alias-bg-layer-2: #17283d;
+  --dsw-alias-bg-layer-3: #20334a;
+  --dsw-specific-sidebar-fill: #0e1b2b;
+  --dsw-alias-brand-primary: #8de3f2;
+  --dsw-alias-brand-text: #8de3f2;
+  --dsw-alias-label-primary: #e8f2fa;
+  --dsw-alias-label-secondary: #aec1d4;
+  --dsw-alias-label-caption: #8ca4bb;
+  --dsw-alias-border-l2: rgba(135, 186, 218, .12);
+  --dsw-alias-border-l3: rgba(135, 186, 218, .18);
+  --dsw-alias-border-l4: rgba(135, 186, 218, .28);
+}

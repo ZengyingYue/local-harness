@@ -1,6 +1,7 @@
-DeepSeek Harness
-DeepSeek Harness
-Welcome to DeepSeek Harness
+Local Harness
+Local Harness
+Welcome to Local Harness
 Build potential. Explore intelligence.
-Sign in
+Use local models
+Sign in to DeepSeek
 Add API Key

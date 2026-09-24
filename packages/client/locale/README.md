@@ -25,6 +25,8 @@ Use `dsh-client-locale` to switch the web GUI between the shipped English and Ch
 <a id="use-this-package"></a>
 ## Use this package
 
+The common local-build product label is Local Harness in both languages.
+
 Use it wherever the web GUI needs a language switch or translated copy: the shipped settings row covers users, and plugin authors register their own dictionaries. Nothing needs configuration to mount — the package activates with the client tree.
 
 ### Choosing a language
