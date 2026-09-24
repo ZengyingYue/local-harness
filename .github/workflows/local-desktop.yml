@@ -43,3 +43,5 @@ jobs:
             apps/desktop/.desktop-build/targets/*/local-artifacts/*.deb
             apps/desktop/.desktop-build/targets/*/local-artifacts/*.exe
           if-no-files-found: error
+          include-hidden-files: true
+          compression-level: 0
