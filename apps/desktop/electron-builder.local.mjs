@@ -19,7 +19,7 @@ export default {
     { from: join(paths.dsh, 'node_modules'), to: 'dsh/node_modules', filter: ['**/*'] }],
   extraResources: [{ from: paths.runtime, to: 'runtime' }, { from: 'resources/icon-windows.png', to: 'icon.png' }],
   linux: { target: ['AppImage', 'deb'], syncDesktopName: true, category: 'Development', executableName: 'local-harness', icon: 'resources/icon-windows.png', maintainer: 'Local Harness contributors' },
-  win: { target: ['nsis'], icon: 'resources/icon-windows.png', signAndEditExecutable: false },
+  win: { target: ['nsis'], icon: 'resources/icon-windows.png', signExecutable: false },
   nsis: { oneClick: false, perMachine: false, allowToChangeInstallationDirectory: true, deleteAppDataOnUninstall: false },
   beforePack: async context => {
     const directories = await officePackageDirectories(paths.dsh, desktopTargetPlatform(resolveDesktopBuildTarget()))
