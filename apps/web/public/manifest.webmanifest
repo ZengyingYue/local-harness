@@ -1,6 +1,6 @@
 {
-  "name": "DeepSeek Harness",
-  "short_name": "DSH",
+  "name": "Local Harness",
+  "short_name": "Local Harness",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",

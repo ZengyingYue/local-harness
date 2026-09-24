@@ -25,7 +25,7 @@ English | [中文](README.zh.md)
 <a id="use-this-package"></a>
 ## Use this package
 
-Local Harness applies a shared aerospace palette with deep navy panels, cyan accents, and a light counterpart. Decorative grids and orbital geometry are presentation only; theme preference, text size, contrast, and keyboard focus remain owned by the existing controls.
+Local Harness uses an offline surreal space-and-satellite scene, violet and cyan accents, and translucent panels. Light and dark palettes retain readable content, existing theme preferences, and keyboard focus.
 
 Users switch the color scheme and content font size from two rows in Settings (General section); both choices persist across restarts on a loopback browser. Feature plugins consume the current snapshot through `ctx.theme` and read the `--dsw-*` tokens in CSS; they do not manage theme state themselves.
 

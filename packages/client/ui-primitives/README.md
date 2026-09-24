@@ -25,6 +25,8 @@ Use `dsh-client-ui-primitives` to build web-client controls and render agent out
 <a id="use-this-package"></a>
 ## Use this package
 
+`OrbitLogo` renders the Local Harness satellite mark beside product labels.
+
 This package is a Web-shell build input. Its static ESM retains third-party imports and styles for Vite; independent consumers supply its development dependencies ([dependency rules](../AGENTS.md#dependency-declaration)).
 
 Compose feature UI from these atoms whenever the web client needs a standard control or an agent-output renderer. They render through React only and take `--dsw-*` design tokens from the theme, so they fit any plugin without importing the theme or the slot system.

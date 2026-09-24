@@ -40,7 +40,7 @@ Target packages declaration-merge their snapshot and Location data maps, then re
 <a id="shell-and-standard-props"></a>
 ## Shell and standard props
 
-The empty conversation presents the Local Harness mission heading and decorative orbital graphic. Its composer, workspace picker, permission controls, and model selector keep the same session operations.
+The empty conversation presents the Local Harness orbital introduction and satellite mark. Layered camera drift, pointer parallax, stars, and orbital signals animate only the blank main conversation. Hidden windows pause the scene; the system’s reduced-motion preference disables its animation and parallax. Its persistent composer, workspace picker, permission controls, and model selector retain their session operations.
 
 The shared image slot props keep display choices separate from durable references: `thumbnail` requests a contained attachment-list thumbnail, while `compact` requests a cropped gallery tile. An optional per-image `label` supplies the accessible display name; loading and cache identity still use the original attachment reference. [ui-attachment](../ui-attachment/README.md) owns rendering and the lightbox.
 

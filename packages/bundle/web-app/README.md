@@ -25,6 +25,8 @@ Run `dsh --profile web` to open an interactive browser GUI with chat, model and 
 <a id="use-this-package"></a>
 ## Use this package
 
+Local Harness disables the account menu, platform account controller, official brand plugin, and automatic credential onboarding. Users configure API providers and local services in Settings → Models.
+
 Start the GUI, open your browser, and start talking to the agent. The flags fine-tune the invocation.
 
 ### Starting the Web GUI
