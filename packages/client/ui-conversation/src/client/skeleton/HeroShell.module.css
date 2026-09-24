@@ -86,6 +86,7 @@
 @media (max-width: 640px) {
   .eyebrow { font-size: 9px; letter-spacing: 1.4px; }
   .headline { max-width: 100%; }
+  .subtitle { max-width: min(280px, 100%); }
 }
 
 /* Workspace row sits 12px above the input card (figma y80 → y112). */
