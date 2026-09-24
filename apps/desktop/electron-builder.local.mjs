@@ -4,6 +4,7 @@ import { join, relative, sep } from 'node:path'
 import { officePackageDirectories } from '../../scripts/libreoffice-packages.mjs'
 
 const paths = resolveDesktopTargetBuildPaths()
+const target = desktopTargetPlatform(resolveDesktopBuildTarget())
 export default {
   appId: 'io.local-harness.desktop',
   productName: 'Local Harness',
@@ -12,7 +13,7 @@ export default {
   directories: { output: join(paths.root, 'local-artifacts') },
   electronDist: paths.electron,
   electronFuses: { runAsNode: true },
-  asar: true,
+  asar: target.platform !== 'win32',
   asarUnpack: ['**/*.{node,dylib,dll,so,exe}', '**/*.so.*', '**/spawn-helper', '**/@vscode/ripgrep-*/bin/rg', '**/@deepseek-ai/libreoffice-kit-*/**/*'],
   files: ['lib/main.js', 'lib/welcome/**/*', 'lib/preload-*.cjs', 'renderer/**/*', 'package.json',
     { from: paths.dsh, to: 'dsh', filter: ['**/*'] },
@@ -22,7 +23,7 @@ export default {
   win: { target: ['nsis'], icon: 'resources/icon-windows.png', signExecutable: false },
   nsis: { oneClick: false, perMachine: false, allowToChangeInstallationDirectory: true, deleteAppDataOnUninstall: false },
   beforePack: async context => {
-    const directories = await officePackageDirectories(paths.dsh, desktopTargetPlatform(resolveDesktopBuildTarget()))
+    const directories = await officePackageDirectories(paths.dsh, target)
     context.packager.config.asarUnpack.push(...directories.map(directory =>
       `**/${relative(paths.dsh, directory).split(sep).join('/')}/**/*`))
   },

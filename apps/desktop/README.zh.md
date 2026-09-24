@@ -1,10 +1,10 @@
-# DeepSeek Harness 桌面端
+# Local Harness 桌面端
 
 [English](README.md) | 中文
 
 Local Harness 在 Ubuntu 和 Windows 上复用完整 Electron/Web 功能。独立的 `package:desktop:local` 构建准备内置 Node、Python、Office、终端及插件运行环境；Linux 目标为 AppImage 和 deb，Windows 目标为当前用户的 NSIS 安装程序。这些包不配置上游更新地址或签名身份。Windows 安装程序的执行需在 Windows 主机验证。
 
-桌面端从实际解包目录解析内置 Office API、原生引擎和 WASM 引擎，包括 Linux 包探测及 worker 资源。
+桌面端从实际解包目录解析内置 Office API、原生引擎和 WASM 引擎，包括 Linux 包探测及 worker 资源。本地 Windows 发行包将完整应用放在 `resources/app`，使 Office 原生辅助进程直接读取普通包路径。打包会校验最终运行环境清单，并在两个平台上执行 DOCX、XLSX 和 PPTX 转换。
 
 桌面应用是完整 dsh Web 应用外的一层 Electron 壳。Electron RunAsNode 子进程启动共享 profile runner，Electron 立即从 `dsh-app://app/` 加载打包内的 Web 入口。共享加载页等待 Host 启动注入，然后在同一文档中启动客户端。Electron 将应用 HTTP 请求转发给已认证的 Web Host，转发时丢弃描述 Node fetch 连接而非资源本身的响应头（`transfer-encoding`、`connection`、`keep-alive`），并把插件 bundle 响应标记为 `no-store`，因为其每次启动都变化的 revision 只会在 Chromium 磁盘缓存中累积；WebSocket 流连接到该 Host，仅为归属的应用窗口附加凭据。Node IPC 承载启动注入、就绪与关闭。Desktop 默认使用端口 `19387`，与 Web 的 `3080` 分开；可通过 `webserver.config.port` patch 覆盖。
 
