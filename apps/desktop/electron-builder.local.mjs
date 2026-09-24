@@ -13,7 +13,7 @@ export default {
   directories: { output: join(paths.root, 'local-artifacts') },
   electronDist: paths.electron,
   electronFuses: { runAsNode: true },
-  asar: target.platform !== 'win32',
+  asar: true,
   asarUnpack: ['**/*.{node,dylib,dll,so,exe}', '**/*.so.*', '**/spawn-helper', '**/@vscode/ripgrep-*/bin/rg', '**/@deepseek-ai/libreoffice-kit-*/**/*'],
   files: ['lib/main.js', 'lib/welcome/**/*', 'lib/preload-*.cjs', 'renderer/**/*', 'package.json',
     { from: paths.dsh, to: 'dsh', filter: ['**/*'] },
